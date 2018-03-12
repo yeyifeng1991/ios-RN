@@ -1,0 +1,15 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target '0312-ReactNative' do
+ pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'DevSupport', # 如果RN版本 >= 0.43，则需要加入此行才能开启开发者菜单
+    'RCTText',
+    'RCTNetwork',
+    'RCTWebSocket', # 这个模块是用于调试功能的
+    
+  ]
+  pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+
+end
